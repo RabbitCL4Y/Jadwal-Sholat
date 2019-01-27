@@ -1,11 +1,4 @@
 <?php
-include "Aink.php";
-echo "Masukan Kota anda : ";
-$kota = trim(fgets(STDIN));
-$url = file_get_contents("https://time.siswadi.com/pray/$kota");
-$url1 = explode("<br>", $url);
-foreach ($url1 as $key){
-$js = json_decode($key, true);
-print_r($js);
-}
+$code = 'aW5jbHVkZSAiQWluay5waHAiOw0KZWNobyAiTWFzdWthbiBLb3RhIGFuZGEgOiAiOw0KJGtvdGEgPSB0cmltKGZnZXRzKFNURElOKSk7DQokdXJsID0gZmlsZV9nZXRfY29udGVudHMoImh0dHBzOi8vdGltZS5zaXN3YWRpLmNvbS9wcmF5LyRrb3RhIik7DQokdXJsMSA9IGV4cGxvZGUoIjxicj4iLCAkdXJsKTsNCmZvcmVhY2ggKCR1cmwxIGFzICRrZXkpew0KJGpzID0ganNvbl9kZWNvZGUoJGtleSwgdHJ1ZSk7DQpwcmludF9yKCRqcyk7DQp9';
+eval(base64_decode($code));
 ?>
